@@ -14,6 +14,7 @@ function App() {
   useEffect(() => {
     fetch("http://127.0.0.1:5555/messages")
       .then((r) => r.json())
+      // important to add r to make sure the information we get back is correct.
       .then((messages) => setMessages(messages));
   }, []);
 
